@@ -1,7 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import { IoMdTime } from "react-icons/io";
-import { MdOutlineAvTimer } from "react-icons/md";
+import Navbar from '../components/Navbar';
+import { CgProfile } from "react-icons/cg";
+import { MdOutlineReviews } from "react-icons/md";
+import { BsGraphUpArrow } from "react-icons/bs";
 
 
 const Home = () => {
@@ -10,41 +11,40 @@ const Home = () => {
     <div className="home relative min-h-[100vh] bg-gray-100">
       <Navbar/>
       <div className="home-content pt-6 w-full">
-        <div className="hero-section w-full">
-          <div className="classes p-4">
-            <h4 className="heading text-center popins text-xl font-semibold drop-shadow-lg ">Total Classes</h4>
-            <div className="classes-container pt-3 flex  gap-4 justify-center flex-col md:flex-row">
-              <div className="class cursor-pointer shadow-sm shadow-green-400 rounded-md md:w-96 popins px-4 py-2 flex flex-col gap-6 bg-green-300">
-                <div className="top-class-info flex items-center justify-between">
-                <h4 className='md:text-lg text-md font-semibold'>Python Programming</h4>
-                <p className='md:text-md text-sm font-semibold flex items-center'><IoMdTime />40 min</p>
+        <div className="home-nav w-[80%] pt-9 mx-auto flex items-center justify-between">
+          <h2 className='font-bold text-2xl popins text-blue-600 '>AttendX</h2>
+          <div className="logo">
+            <CgProfile size={29} className=' cursor-pointer'/>
+          </div>
+        </div>
+        <div className="hero-section w-[90%] mx-auto">
+          <div className="hero-left pt-14 flex flex-col gap-5">
+             <div className=" flex items-center">
+             <p className="moto popins text-gray-700 text-sm font-semibold">Mark your Attendence with AttendX</p>
+             <div className='w-20 h-[0.5px] bg-gray-700'></div>
+             </div>
+             <div>
+              <h3 className='text-xl popins font-bold w-64'>Attendence Manager for GDC Kulgam</h3>
+              <p className='p-7 popins font-semibold flex items-center gap-2 cursor-pointer'><MdOutlineReviews className='bg-green-700 rounded-full p-1 text-white text-sm' size={28}/>Review Classes</p>
+             </div>
+             <div className='p-10 '>
+                <h4 className=' font-semibold flex items-center gap-3 text-xl'>Top Attender <BsGraphUpArrow size={38} className='bg-green-700 rounded-full p-2 w-11 h-11 text-white text-sm'/></h4>
+                <div className=' w-80 flex items-center border-2 p-3 rounded-lg gap-2'>
+                <CgProfile size={49} className='bg-blue-700 rounded-full  text-white w-16 cursor-pointer'/>
+                <div className='flex flex-col'>
+                  <div className="name-n-updated flex items-center justify-between popins">
+                    <p className='text-sm font-semibold'>Hazim Bhat</p>
+                    <p className='text-[11px]'>Updated: <span>1 day ago</span></p>
+                  </div>
+                  <div>
+                    <p className='text-sm font-bold text-gray-600'>This student has the most no of days attended</p>
+                  </div>
                 </div>
-                 <div className="bottom-class-info flex justify-between">
-                  <p className='md:text-lg text-md border-[1px] border-green-400 px-2 rounded-md font-medium shadow-md shadow-green-500'>Salam sir</p>
-                  <p className='md:text-md text-sm font-semibold flex items-center'><MdOutlineAvTimer />10:40 AM</p>
-                 </div>
-              </div>
-              <div className="class cursor-pointer shadow-sm shadow-green-400 rounded-md md:w-96 popins px-4 py-2 flex flex-col gap-6 bg-green-300">
-                <div className="top-class-info flex items-center justify-between">
-                <h4 className='md:text-lg text-md font-semibold'>Computer Graphics</h4>
-                <p className='md:text-md text-sm font-semibold flex items-center'><IoMdTime />40 min</p>
                 </div>
-                 <div className="bottom-class-info flex justify-between">
-                  <p className='md:text-lg text-md border-[1px] border-green-400 px-2 rounded-md font-medium shadow-md shadow-green-500'>Saba mam</p>
-                  <p className='md:text-md text-sm font-semibold flex items-center'><MdOutlineAvTimer />11:20 AM</p>
-                 </div>
-              </div>
-              <div className="class cursor-pointer shadow-sm shadow-green-400 rounded-md md:w-96 popins px-4 py-2 flex flex-col gap-6 bg-green-300">
-                <div className="top-class-info flex items-center justify-between">
-                <h4 className='md:text-lg text-md font-semibold'>Internet technology</h4>
-                <p className='md:text-md text-sm font-semibold flex items-center'><IoMdTime />40 min</p>
-                </div>
-                 <div className="bottom-class-info flex justify-between">
-                  <p className='md:text-lg text-md border-[1px] border-green-400 px-2 rounded-md font-medium shadow-md shadow-green-500'>Nisar Sir</p>
-                  <p className='md:text-md text-sm font-semibold flex items-center'><MdOutlineAvTimer />12:00 PM</p>
-                 </div>
-              </div>
-            </div>
+             </div>
+          </div>
+          <div className="hero-right">
+
           </div>
         </div>
       </div>
